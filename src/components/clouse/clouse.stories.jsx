@@ -1,12 +1,11 @@
 import React from 'react';
-import { Map, Record } from 'immutable';
+import { Map } from 'immutable';
 import 'antd/dist/antd.css';
 import Parse from 'parse';
-import TableView from './TableView';
-import OprandView from '../oprand/OprandView';
+import ClouseView from './ClouseView';
 
 export default {
-  title: 'datafilter',
+  title: 'CRUD-app',
 };
 
 const fields = Map({
@@ -69,13 +68,6 @@ const constraints = Map({
 const ClouseQuery = Parse.Object.extend('ClouseQuery');
 const query = new Parse.Query(ClouseQuery);
 
-export const Operand = () => (
-  <OprandView
-    filterData={filterData}
-    constraints={constraints}
-    fields={fields}
-  />
-);
 
 export const Clouse = () => (
   <ClouseView
@@ -84,8 +76,4 @@ export const Clouse = () => (
     fields={fields}
     constraints={constraints}
   />
-);
-
-export const Table = () => (
-  <TableView />
 );

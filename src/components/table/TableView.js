@@ -94,6 +94,8 @@ const TableView = () => {
   } = tableController();
 
 
+  console.log(data.personsList);
+
   const columns = [
     {
       title: 'objectId',
